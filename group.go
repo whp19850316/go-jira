@@ -129,9 +129,9 @@ func (s *GroupService) GetWithOptions(name string, options *GroupSearchOptions) 
 func (s *GroupService) AddWithContext(ctx context.Context, groupname string, username string) (*Group, *Response, error) {
 	apiEndpoint := fmt.Sprintf("/rest/api/2/group/user?groupname=%s", groupname)
 	var user struct {
-		Name string `json:"accountId"`
+		AccountID string `json:"accountId"`
 	}
-	user.Name = username
+	user.AccountID = username
 	req, err := s.client.NewRequestWithContext(ctx, "POST", apiEndpoint, &user)
 	if err != nil {
 		return nil, nil, err
