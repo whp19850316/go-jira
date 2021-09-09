@@ -1,4 +1,10 @@
+package jira
 
+import (
+	"context"
+	"fmt"
+	"net/url"
+)
 
 // GroupService handles Groups for the Jira instance / API.
 //
