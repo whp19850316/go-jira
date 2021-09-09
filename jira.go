@@ -27,7 +27,7 @@ type httpClient interface {
 }
 
 // A Client manages communication with the Jira API.
-type Client struct {
+type  struct {
 	// HTTP client used to communicate with the API.
 	client httpClient
 
